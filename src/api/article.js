@@ -11,6 +11,13 @@ export const getArticles = () => {
     })
 }
 
+export const getArticleBySlug = slug => {
+    return request({
+        method:"GET",   //请求方法
+        url:`/api/articles/${slug}` //请求路径
+    })
+}
+
 export const createArticle = ({
     title,
     description,

@@ -48,6 +48,12 @@ export default{
         async onCreateArticle(){
             const {data} = await createArticle(this.article)
             console.log(data)
+            this.$router.push({
+                name:"article",
+                params:{
+                    slug:data.article.slug
+                }
+            })
         }
     }
 }

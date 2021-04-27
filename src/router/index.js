@@ -24,6 +24,11 @@ export default new VueRouter({
           path:"editor",
           component:() => import("@/views/editor")
         },
+        {
+          name:"article",
+          path:"article/:slug",
+          component:() => import("@/views/article")
+        },
       ]
     }
   ]
